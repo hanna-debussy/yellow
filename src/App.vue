@@ -1,11 +1,12 @@
 <template>
   <router-view></router-view>
-  <!-- <HelloWorld msg="Vite + Vue" /> -->
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { RouterView } from 'vue-router';
-import HelloWorld from './components/HelloWorld.vue'
+import HButton from '@/components/h-button'
+
+customElements.define('h-button', HButton)
 </script>
 
 <style>
