@@ -7,7 +7,6 @@
   width: 50%;
   height: 100%;
   display: inline-block;
-  overflow: hidden;
   position: relative;
 }
 
@@ -16,7 +15,7 @@
   line-height: 200px;
   position: absolute;
   right: 10%;
-  top: 30%;
+  top: 35%;
   color: rgb(255, 217, 0);
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
@@ -38,7 +37,7 @@
   line-height: 200px;
   position: absolute;
   left: 10%;
-  top: 60%;
+  top: 45%;
   color: #fff;
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
