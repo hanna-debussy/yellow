@@ -1,5 +1,5 @@
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -61,9 +61,9 @@ button:focus-visible {
 }
 
 #app {
-  max-width: 1280px;
+  /* max-width: 1280px; */
   margin: 0 auto;
-  padding: 2rem;
+  /* padding: 2rem; */
   text-align: center;
 }
 
@@ -79,3 +79,4 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+

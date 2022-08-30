@@ -1,5 +1,23 @@
+.control-btns button {
+  margin-right: 10px;
+  width: 100px;
+  height: 40px;
+  background-color: #fff;
+  border: 0px solid transparent;
+  background-image: linear-gradient(to bottom right, #dae6fd, #b8d0fd, rgb(134, 175, 255));
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 2px 2px 7px 1px #ddd;
+}
+
 #hanna {
   width: 200px;
-  height: 50px;
+  height: 70px;
   border: none;
+  border-radius: 30px;
+  background-color: #ffe033;
+  font-size: 1.5rem;
+  box-shadow: none;
+  transition: 0.5s ease;
 }

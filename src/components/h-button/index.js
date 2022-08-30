@@ -1,7 +1,14 @@
+import styleSheet from './style.css'
+
+
 const template = document.createElement("template")
 
 template.innerHTML = `
-  <div>
+  <style>
+    ${styleSheet}
+  </style>
+  
+  <div class="control-btns">
     <button class="small">Small</button>
     <button class="original">Turn Back</button>
     <button class="large">Large</button>
@@ -15,7 +22,6 @@ template.innerHTML = `
     </button>
   </div>
 `
-
 class HButton extends HTMLElement {
   constructor() {
     super();
@@ -31,7 +37,7 @@ class HButton extends HTMLElement {
     this.lightOnOff = false
     this.getLightOnOff()
 
-    this.shadowRoot.querySelector("#hanna").style.backgroundColor = "#ffd900"
+    this.shadowRoot.querySelector("#hanna").style.backgroundColor = "#ffe033"
     this.shadowRoot.querySelector("#hanna").style.color = "#000"
   }
 
@@ -39,7 +45,7 @@ class HButton extends HTMLElement {
     this.lightOnOff = false
     this.getLightOnOff()
 
-    this.shadowRoot.querySelector("#hanna").style.backgroundColor = "#9326ff"
+    this.shadowRoot.querySelector("#hanna").style.backgroundColor = "#906eff"
     this.shadowRoot.querySelector("#hanna").style.color = "#fff"
   }
 
@@ -47,38 +53,44 @@ class HButton extends HTMLElement {
     this.buttonColor = this.shadowRoot.querySelector("#hanna").style.backgroundColor
 
     this.shadowRoot.querySelector("#hanna").style.boxShadow = 
-    this.lightOnOff ? `0 0 7px ${this.buttonColor}, 0 0 10px ${this.buttonColor}, 0 0 21px ${this.buttonColor}, 0 0 42px ${this.buttonColor}` : "none"
+    this.lightOnOff ? `0 0 5px ${this.buttonColor}, 0 0 8px ${this.buttonColor}, 0 0 17px ${this.buttonColor}, 0 0 35px ${this.buttonColor}` : "none"
     this.shadowRoot.querySelector(".light").innerHTML = 
     this.lightOnOff ? "Light Off" : "Light On"
     this.lightOnOff = !this.lightOnOff
   }
 
   getSmaller = () => {
+    this.lightOnOff = false
+    this.getLightOnOff()
     const Hanna = this.shadowRoot.querySelector("#hanna")
-
-    Hanna.style.width = "140px"
-    Hanna.style.height = "40px"
+    Hanna.style.width = "150px"
+    Hanna.style.height = "50px"
+    Hanna.style.backgroundColor = "#ffe96e"
     Hanna.style.border = "4px"
     Hanna.style.fontSize = "1rem"
   }
 
   getOriginal = () => {
+    this.lightOnOff = false
+    this.getLightOnOff()
     const Hanna = this.shadowRoot.querySelector("#hanna")
     Hanna.style.width = "200px"
     Hanna.style.height = "70px"
+    Hanna.style.backgroundColor = "#ffe033"
     Hanna.style.border = "none"
     Hanna.style.borderRadius = "30px"
-    Hanna.style.backgroundColor = "#ffd900"
     Hanna.style.fontSize = "1.5rem"
     Hanna.style.boxShadow = "none"
 
   }
 
   getLarger = () => {
+    this.lightOnOff = false
+    this.getLightOnOff()
     const Hanna = this.shadowRoot.querySelector("#hanna")
-
     Hanna.style.width = "350px"
     Hanna.style.height = "90px"
+    Hanna.style.backgroundColor = "#ffd000"
     Hanna.style.border = "40px"
     Hanna.style.fontSize = "2rem"
   }
@@ -89,15 +101,12 @@ class HButton extends HTMLElement {
   }
 
   connectedCallback() {
-    this.getOriginal()
-
     this.shadowRoot.querySelector("#yellow").addEventListener("click", this.changeToYellow)
     this.shadowRoot.querySelector("#purple").addEventListener("click", this.changeToPurple)
     this.shadowRoot.querySelector(".light").addEventListener("click", this.getLightOnOff)
     this.shadowRoot.querySelector(".small").addEventListener("click", this.getSmaller)
     this.shadowRoot.querySelector(".original").addEventListener("click", this.getOriginal)
     this.shadowRoot.querySelector(".large").addEventListener("click", this.getLarger)
-
   }
 
   disconnectedCallback() {
