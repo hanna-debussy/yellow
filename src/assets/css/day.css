@@ -1,0 +1,83 @@
+@keyframes rainbowSlide {
+  from {
+    top: -100vh;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@keyframes fenceSlide {
+  0% {
+    right: -50vw;
+  }
+  40% {
+    right: -50vw;
+  }
+  100% {
+    right: 0px;
+  }
+}
+
+@keyframes houseSlide {
+  0% {
+    top: -100vh;
+  }
+  30% {
+    top: -100vh;
+  }
+  100% {
+    top: 150px;
+  }
+}
+
+@keyframes meSlide {
+  0% {
+    bottom: -700px;
+  }
+  60% {
+    bottom: -700px;
+  }
+  100% {
+    bottom: 50px;
+  }
+}
+
+/* sketchbook */
+.sketchbook {
+  margin: 0 auto;
+  width: 1600px;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.sketchbook .rainbow {
+  position: absolute;
+  /* top: -100vh; */
+  left: 0;
+  /* transition: all 0.7s linear; */
+  /* transform: translateY( 100vh ); */
+  animation: rainbowSlide 1s ease;
+}
+
+.sketchbook .fence {
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+  animation: fenceSlide 1.5s ease;
+}
+
+.sketchbook .house {
+  position: absolute;
+  left: 45%;
+  top: 150px;
+  animation: houseSlide 1.2s ease;
+}
+
+.sketchbook .me {
+  position: absolute;
+  left: 20%;
+  bottom: 50px;
+  animation: meSlide 1.5s ease;
+}
