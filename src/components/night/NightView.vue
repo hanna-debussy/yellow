@@ -1,6 +1,10 @@
 <template>
-  <div class="space">
-    <SolarSystem/>
+  <div class="night-template">
+    <div class="space">
+      <div class="space-position">
+        <SolarSystem/>
+      </div>
+    </div>
   </div>
 </template>
 

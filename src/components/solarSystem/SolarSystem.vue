@@ -58,7 +58,7 @@
 <style>
 @keyframes spinPlanet {
   to {
-    transform: rotate(360deg);
+    transform: rotate(-360deg);
   }
 }
 
@@ -67,7 +67,6 @@
   height: 100%;
   position: relative;
   background-color: rgb(42, 46, 65);
-  /* border: 1px solid #000; */
 }
 
 .sun {
@@ -79,6 +78,7 @@
   background-color: rgb(223, 70, 23);
   border-radius: 100%;
   border: 0px solid #000;
+  box-shadow: 0 0 9px 8px rgb(255, 106, 37);
 }
 
 .mercury .orbit,
@@ -114,13 +114,13 @@
 }
 
 .mercury .orb {
-  width: 10px;
-  height: 10px;
+  width: 7.5%;
+  height: 7.5%;
   background-color: rgb(255, 221, 108);
   border-radius: 100%;
   position: absolute;
-  left: calc(50% - 5px);
-  top: -5px;
+  left: 46.25%;
+  top: -3.75%;
 }
 
 .venus {
@@ -142,13 +142,13 @@
 }
 
 .venus .orb {
-  width: 15px;
-  height: 15px;
+  width: 8%;
+  height: 8%;
   background-color: rgb(255, 137, 91);
   border-radius: 100%;
   position: absolute;
-  left: calc(50% - 7.5px);
-  top: -7.5px;
+  left: 44%;
+  top: -4%;
 }
 
 .earth {
@@ -170,13 +170,13 @@
 }
 
 .earth .orb {
-  width: 17px;
-  height: 17px;
+  width: 7%;
+  height: 7%;
   background-color: rgb(91, 162, 255);
   border-radius: 100%;
   position: absolute;
-  left: calc(50% - 8.5px);
-  top: -8.5px;
+  left: 46.5%;
+  top: -3.5%;
 }
 
 .mars {
@@ -198,13 +198,13 @@
 }
 
 .mars .orb {
-  width: 12px;
-  height: 12px;
+  width: 4%;
+  height: 4%;
   background-color: rgb(255, 178, 91);
   border-radius: 100%;
   position: absolute;
-  left: calc(50% - 6px);
-  top: -6px;
+  left: 48%;
+  top: -2%;
 }
 
 .jupiter {
@@ -226,13 +226,13 @@
 }
 
 .jupiter .orb {
-  width: 25px;
-  height: 25px;
+  width: 8%;
+  height: 8%;
   background-color: rgb(245, 212, 174);
   border-radius: 100%;
   position: absolute;
-  left: calc(50% - 12.5px);
-  top: -12.5px;
+  left: 46%;
+  top: -4%;
 }
 
 .saturn {
@@ -254,13 +254,13 @@
 }
 
 .saturn .orb {
-  width: 22px;
-  height: 22px;
+  width: 6%;
+  height: 6%;
   background-color: rgb(190, 184, 177);
   border-radius: 100%;
   position: absolute;
-  left: calc(50% - 11px);
-  top: -11px;
+  left: 47%;
+  top: -3%;
 }
 
 .uranos {
@@ -282,13 +282,13 @@
 }
 
 .uranos .orb {
-  width: 18px;
-  height: 18px;
+  width: 4%;
+  height: 4%;
   background-color: rgb(98, 205, 231);
   border-radius: 100%;
   position: absolute;
-  left: calc(50% - 9px);
-  top: -9px;
+  left: 48%;
+  top: -2%;
 }
 
 .neptune {
@@ -310,13 +310,13 @@
 }
 
 .neptune .orb {
-  width: 18px;
-  height: 18px;
+  width: 3%;
+  height: 3%;
   background-color: rgb(122, 98, 231);
   border-radius: 100%;
   position: absolute;
-  left: calc(50% - 9px);
-  top: -9px;
+  left: 48.5%;
+  top: -1.5%;
 }
 
 
