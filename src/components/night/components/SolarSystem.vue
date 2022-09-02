@@ -34,7 +34,9 @@
     <div class="saturn">
       <div class="orbit"></div>
       <div class="planet">
+        <div class="ring ring-top"></div>
         <div class="orb"></div>
+        <div class="ring ring-bottom"></div>
       </div>
     </div>
     <div class="uranos">
@@ -66,7 +68,6 @@
   width: 100%;
   height: 100%;
   position: relative;
-  background-color: rgb(42, 46, 65);
 }
 
 .sun {
@@ -261,6 +262,24 @@
   position: absolute;
   left: 47%;
   top: -3%;
+}
+
+.saturn .ring {
+  width: 10%;
+  height: 2%;
+  /* background-color: rgb(155, 138, 119); */
+  border-radius: 100%;
+  position: absolute;
+  left: 45%;
+  top: -1%;
+}
+
+.saturn .ring-top {
+  border-top: 4px solid rgb(155, 138, 119);
+}
+
+.saturn .ring-bottom {
+  border-bottom: 4px solid rgb(155, 138, 119);
 }
 
 .uranos {

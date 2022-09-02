@@ -1,6 +1,9 @@
 <template>
   <div class="night-template">
-    <div class="space">
+    <div class="night-intro">
+      <div class="neumorphism">
+        <NeuButtons/>
+      </div>
       <div class="space-position">
         <SolarSystem/>
       </div>
@@ -9,7 +12,8 @@
 </template>
 
 <script setup>
-import SolarSystem from "@/components/solarSystem/SolarSystem.vue"
+import NeuButtons from "@/components/night/components/NeuButtons.vue"
+import SolarSystem from "@/components/night/components/SolarSystem.vue"
 </script>
 
 <style>

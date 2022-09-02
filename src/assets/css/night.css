@@ -1,16 +1,25 @@
 .night-template {
-  width: 100%;
+  width: 100vw;
   min-height: 100vh;
-  background-color: rgb(42, 46, 65);
+  overflow: hidden;
+  background-color: rgb(48, 53, 68);
 }
 
-.space {
+.night-intro {
   width: 100%;
   height: 100vh;
   position: relative;
 }
 
-.space .space-position {
+.night-intro .neumorphism {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: calc(50vh - 250px);
+  left: 500px;
+}
+
+.night-intro .space-position {
   width: 1000px;
   height: 1000px;
   position: absolute;
