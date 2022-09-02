@@ -2,7 +2,9 @@
   <div class="night-template">
     <div class="night-intro">
       <div class="neumorphism">
-        <NeuButtons/>
+        <h-neu-button>
+          <span slot="buttonText">멈춰!</span>
+        </h-neu-button>
       </div>
       <div class="space-position">
         <SolarSystem/>
@@ -13,7 +15,11 @@
 
 <script setup>
 import NeuButtons from "@/components/night/components/NeuButtons.vue"
+import HNeuButton from "@/components/night/components/neuButtons"
 import SolarSystem from "@/components/night/components/SolarSystem.vue"
+
+customElements.define('h-neu-button', HNeuButton)
+
 </script>
 
 <style>
