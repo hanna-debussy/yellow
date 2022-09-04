@@ -3,25 +3,31 @@
     <div class="night-intro section">
       <div class="neumorphism">
         <h-neu-button type="default">
-          <!-- <span slot="buttonText">멈춰!</span> -->
+          <!-- <span slot="buttonText"></span> -->
         </h-neu-button>
+      </div>
+      <div class="toggle">
+        <h-neu-toggle width="200">
+
+        </h-neu-toggle>
       </div>
       <div class="space-position">
         <SolarSystem/>
       </div>
     </div>
-    <div class="night-neumorphism selection">
+    <div class="night-neumorphism">
       hey
     </div>
   </div>
 </template>
 
 <script setup>
-import HNeuButton from "@/components/night/components/neuButtons"
+import {HNeuButton, HNeuToggle} from "@/components/night/components/neuButtons"
 import SolarSystem from "@/components/night/components/SolarSystem.vue"
 import { onMounted } from "vue"
 
 customElements.define('h-neu-button', HNeuButton)
+customElements.define('h-neu-toggle', HNeuToggle)
 
 
 // onMounted(() => {

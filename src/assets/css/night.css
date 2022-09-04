@@ -23,7 +23,7 @@
   width: 800px;
   height: 800px;
   position: absolute;
-  right: -350px;
+  right: -290px;
   top: calc(50vh - 400px);
 }
 
@@ -33,3 +33,12 @@
   position: relative;
   background-color: #eef;
 }
+
+.night-intro .toggle {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: calc(40vh);
+  left: 700px;
+}
+

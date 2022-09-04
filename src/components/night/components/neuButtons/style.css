@@ -1,3 +1,5 @@
+/* neuButtons */
+
 .button-container {
   width: 100%;
   height: 100%;
@@ -67,4 +69,94 @@
   border-radius: 100%;
   box-shadow: -5px -5px 7px rgb(73, 78, 92);
   visibility: hidden;
+}
+
+
+/* neuToggle */
+.toggle-container {
+  /* width: 300px;
+  height: 120px; */
+  position: relative;
+}
+
+.toggle-container .bar,
+.toggle-container .bar-shadow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.toggle-container .bar,
+.toggle-container .bar-shadow,
+.toggle-container .bar-background,
+.toggle-container .bar-background-shadow {
+  /* height px따라 변경할 것 */
+  /* border-radius: 60px; */
+  transition: all 15s ease;
+}
+
+.toggle-container .bar {
+  background-color: rgb(52, 57, 73);
+  /* background: rgb(122, 157, 228); */
+  box-shadow: 5px 5px 12px rgb(24, 25, 27);
+}
+
+.toggle-container .bar-shadow {
+  box-shadow: -5px -5px 7px rgb(69, 74, 87);
+}
+
+.toggle-container .bar-background,
+.toggle-container .bar-background-shadow {
+  /* border 두께 크기에 따라 변경 */
+  position: absolute;
+}
+
+@keyframes gradation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1
+  }
+}
+
+.toggle-container .bar-background {
+  background: rgb(38, 42, 54);
+  /* background: linear-gradient(to right, rgb(142, 177, 248),rgb(155, 135, 241)); */
+  box-shadow: inset 5px 5px 12px rgb(32, 34, 37);
+  /* box-shadow: inset 5px 5px 12px rgb(142, 177, 248); */
+  animation: gradation 10s linear
+}
+
+.toggle-container .bar-background-shadow {
+  box-shadow: inset -5px -5px 7px rgb(40, 42, 46);
+  /* box-shadow: inset -5px -5px 7px rgb(148, 132, 238); */
+}
+
+.toggle-container .onBar,
+.toggle-container .switch,
+.toggle-container .switch-shadow,
+.toggle-container .switch-background {
+  position: absolute;
+  transition: all 0.5s ease;
+}
+
+.toggle-container .onBar {
+  top: 0;
+  left: 0;
+}
+
+.toggle-container .switch {
+  background-color: rgb(57, 62, 80);
+  box-shadow: 5px 0px 15px rgb(24, 25, 27);
+}
+
+.toggle-container .switch-shadow {
+  box-shadow: inset 5px 5px 7px rgb(45, 47, 54);
+}
+
+.toggle-container .switch-background {
+  box-shadow: inset -5px -5px 7px rgb(73, 78, 92);
 }
