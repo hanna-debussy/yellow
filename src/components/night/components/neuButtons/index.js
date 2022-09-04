@@ -7,8 +7,12 @@ template.innerHTML = `
    ${StyleSheet}
   </style>
   <div class="button-container">
-    <div class="neu-btn-shadow">
-    </div>
+  <div class="inner-circle"></div>
+  <div class="inner-circle-shadow"></div>
+  <div class="neu-btn-inner"></div>
+  <div class="neu-btn-inner-shadow"></div>
+
+    <div class="neu-btn-shadow"></div>
     <div class="neu-btn">
       <slot name="buttonText">
     </div>
@@ -41,15 +45,39 @@ class HNeuButton extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ["buttonText"]
+    return ["buttonText", "type"]
   }
 
   attributeChangedCallback(buttonText, oldValue, newValue) {
-    this.shadowRoot.querySelector(".neu-btn").innerText = this.getAttribute("buttonText");
+    if (this.getAttribute("type") == "default") {
+      this.shadowRoot.querySelector(".neu-btn").style.borderRadius = "20px"
+      this.shadowRoot.querySelector(".neu-btn-shadow").style.borderRadius = "20px"
+    } else if (this.getAttribute("type") == "round") {
+      this.shadowRoot.querySelector(".neu-btn").style.borderRadius = "100%"
+      this.shadowRoot.querySelector(".neu-btn-shadow").style.borderRadius = "100%"
+    } 
+    
+    if (this.getAttribute("type") == "circle") {
+      this.shadowRoot.querySelector(".neu-btn").style.borderRadius = "100%"
+      this.shadowRoot.querySelector(".neu-btn-shadow").style.borderRadius = "100%"
+      this.shadowRoot.querySelector(".neu-btn-inner").style.visibility = "visible"
+      this.shadowRoot.querySelector(".neu-btn-inner-shadow").style.visibility = "visible"
+      this.shadowRoot.querySelector(".inner-circle").style.visibility = "visible"
+      this.shadowRoot.querySelector(".inner-circle-shadow").style.visibility = "visible"
+      this.shadowRoot.querySelector(".button-container").removeEventListener("click", this.toggleOnOff)
+    } else {
+      this.shadowRoot.querySelector(".neu-btn-inner").style.visibility = "hidden"
+      this.shadowRoot.querySelector(".neu-btn-inner-shadow").style.visibility = "hidden"
+      this.shadowRoot.querySelector(".inner-circle").style.visibility = "hidden"
+      this.shadowRoot.querySelector(".inner-circle-shadow").style.visibility = "hidden"
+      this.shadowRoot.querySelector(".button-container").addEventListener("click", this.toggleOnOff)
+    }
   }
 
   connectedCallback() {
-    this.shadowRoot.querySelector(".button-container").addEventListener("click", this.toggleOnOff)
+    if (this.getAttribute("type") != "circle") {
+      this.shadowRoot.querySelector(".button-container").addEventListener("click", this.toggleOnOff)
+    }
   }
 
   disconnectedCallback() {
