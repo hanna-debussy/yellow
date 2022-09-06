@@ -1,7 +1,7 @@
 .night-template {
   width: 100vw;
   min-height: 100vh;
-  background-color: rgb(48, 53, 68);
+  background-color: rgb(40, 42, 49);
 }
 
 .night-intro {
@@ -20,12 +20,11 @@
 }
 
 .night-intro .neumorphism .musicplayer-front {
-  width: 300px;
-  height: 65vh;
+  width: 350px;
+  height: 700px;
   position: absolute;
   left: 150px;
   top: 10vh;
-  background-color: #aaf;
 }
 
 .night-intro .space-position {

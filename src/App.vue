@@ -11,4 +11,5 @@ import { RouterView } from 'vue-router';
 @import "assets/css/introduction.css";
 @import "assets/css/day.css";
 @import "assets/css/night.css";
+@import "assets/css/musicPlayer.css";
 </style>
