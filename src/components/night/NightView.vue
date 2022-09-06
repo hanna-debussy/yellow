@@ -2,14 +2,16 @@
   <div class="night-template">
     <div class="night-intro section">
       <div class="neumorphism">
-        <h-neu-button type="default">
-          <!-- <span slot="buttonText"></span> -->
+        <!-- <h-neu-button type="default">
+          <span slot="buttonText"></span>
         </h-neu-button>
       </div>
       <div class="toggle">
-        <h-neu-toggle width="200">
-
-        </h-neu-toggle>
+        <h-neu-toggle width="100">
+        </h-neu-toggle> -->
+        <div class="musicplayer-front">
+          <MusicPlayerFront/>
+        </div>
       </div>
       <div class="space-position">
         <SolarSystem/>
@@ -23,8 +25,8 @@
 
 <script setup>
 import {HNeuButton, HNeuToggle} from "@/components/night/components/neuButtons"
+import MusicPlayerFront from "@/components/night/components/MusicPlayerFront.vue"
 import SolarSystem from "@/components/night/components/SolarSystem.vue"
-import { onMounted } from "vue"
 
 customElements.define('h-neu-button', HNeuButton)
 customElements.define('h-neu-toggle', HNeuToggle)

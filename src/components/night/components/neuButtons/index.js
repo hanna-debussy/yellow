@@ -94,9 +94,9 @@ toggleTemplate.innerHTML = `
   <div class="toggle-container">
     <div class="bar"></div>
     <div class="bar-shadow"></div>
+    <div class="bar-color"></div>
     <div class="bar-background"></div>
     <div class="bar-background-shadow"></div>
-    <div class="onBar"></div>
     <div class="switch"></div>
     <div class="switch-shadow"></div>
     <div class="switch-background"></div>
@@ -126,10 +126,9 @@ class HNeuToggle extends HTMLElement {
       this.shadowRoot.querySelector(".toggle-container .switch-shadow").style.left = switchOn
       this.shadowRoot.querySelector(".toggle-container .switch-background").style.left = switchOn
       this.shadowRoot.querySelector(".toggle-container .switch").style.boxShadow = "-5px 0px 15px rgb(24, 25, 27)"
-      this.shadowRoot.querySelector(".toggle-container .onBar").style.width = switchOn
 
       this.shadowRoot.querySelector(".toggle-container .bar").style.backgroundColor = "rgb(122, 157, 228)"
-      this.shadowRoot.querySelector(".toggle-container .bar-background").style.background = "linear-gradient(to right, rgb(142, 177, 248),rgb(155, 135, 241))"
+      this.shadowRoot.querySelector(".toggle-container .bar-color").style.background = "linear-gradient(to right, rgb(156, 189, 255),rgb(155, 135, 241))"
       this.shadowRoot.querySelector(".toggle-container .bar-background").style.boxShadow = "inset 5px 5px 12px rgb(142, 177, 248)"
       this.shadowRoot.querySelector(".toggle-container .bar-background-shadow").style.boxShadow = "inset -5px -5px 7px rgb(148, 132, 238)"
     } else {
@@ -137,10 +136,9 @@ class HNeuToggle extends HTMLElement {
         this.shadowRoot.querySelector(".toggle-container .switch-shadow").style.left = switchOff
         this.shadowRoot.querySelector(".toggle-container .switch-background").style.left = switchOff
         this.shadowRoot.querySelector(".toggle-container .switch").style.boxShadow = "5px 0px 15px rgb(24, 25, 27)"
-        this.shadowRoot.querySelector(".toggle-container .onBar").style.width = switchOff
 
         this.shadowRoot.querySelector(".toggle-container .bar").style.backgroundColor = "rgb(52, 57, 73)"
-        this.shadowRoot.querySelector(".toggle-container .bar-background").style.background = "rgb(38, 42, 54)"
+        this.shadowRoot.querySelector(".toggle-container .bar-color").style.background = "rgb(38, 42, 54)"
         this.shadowRoot.querySelector(".toggle-container .bar-background").style.boxShadow = "inset 5px 5px 12px rgb(32, 34, 37)"
         this.shadowRoot.querySelector(".toggle-container .bar-background-shadow").style.boxShadow = "inset -5px -5px 7px rgb(40, 42, 46)"
         }
@@ -155,18 +153,23 @@ class HNeuToggle extends HTMLElement {
     const toggleHeight = toggleWidth * 0.4
     this.shadowRoot.querySelector(".toggle-container").style.width = `${toggleWidth}px`
     this.shadowRoot.querySelector(".toggle-container").style.height = `${toggleHeight}px`
+    this.shadowRoot.querySelector(".toggle-container .bar-color").style.width = `${toggleWidth - (toggleHeight * 0.12)}px`
+    this.shadowRoot.querySelector(".toggle-container .bar-color").style.height = `${toggleHeight * 0.88}px`
     this.shadowRoot.querySelector(".toggle-container .bar-background").style.width = `${toggleWidth - (toggleHeight * 0.12)}px`
     this.shadowRoot.querySelector(".toggle-container .bar-background").style.height = `${toggleHeight * 0.88}px`
     this.shadowRoot.querySelector(".toggle-container .bar-background-shadow").style.width = `${toggleWidth - (toggleHeight * 0.12)}px`
     this.shadowRoot.querySelector(".toggle-container .bar-background-shadow").style.height = `${toggleHeight * 0.88}px`
 
+    this.shadowRoot.querySelector(".toggle-container .bar-color").style.top  = `${(toggleHeight * 0.06)}px`
+    this.shadowRoot.querySelector(".toggle-container .bar-color").style.left  = `${(toggleHeight * 0.06)}px`
     this.shadowRoot.querySelector(".toggle-container .bar-background").style.top  = `${(toggleHeight * 0.06)}px`
-    this.shadowRoot.querySelector(".toggle-container .bar-background-shadow").style.top = `${(toggleHeight * 0.06)}px`
     this.shadowRoot.querySelector(".toggle-container .bar-background").style.left  = `${(toggleHeight * 0.06)}px`
+    this.shadowRoot.querySelector(".toggle-container .bar-background-shadow").style.top = `${(toggleHeight * 0.06)}px`
     this.shadowRoot.querySelector(".toggle-container .bar-background-shadow").style.left = `${(toggleHeight * 0.06)}px`
 
     this.shadowRoot.querySelector(".toggle-container .bar").style.borderRadius = `${toggleWidth * 0.2}px`
     this.shadowRoot.querySelector(".toggle-container .bar-shadow").style.borderRadius  = `${toggleWidth * 0.2}px`
+    this.shadowRoot.querySelector(".toggle-container .bar-color").style.borderRadius  = `${toggleWidth * 0.2}px`
     this.shadowRoot.querySelector(".toggle-container .bar-background").style.borderRadius  = `${toggleWidth * 0.2}px`
     this.shadowRoot.querySelector(".toggle-container .bar-background-shadow").style.borderRadius = `${toggleWidth * 0.2}px`
 
@@ -188,7 +191,6 @@ class HNeuToggle extends HTMLElement {
     this.shadowRoot.querySelector(".toggle-container .switch-shadow").style.borderRadius = switchDiameter
     this.shadowRoot.querySelector(".toggle-container .switch-background").style.borderRadius = switchDiameter
 
-    this.shadowRoot.querySelector(".toggle-container .onBar").style.width = switchDiameter
     // this.shadowRoot.querySelector(".toggle-container .switch").css({"width": `${toggleHeight * 0.8}px`, "height": `${toggleHeight * 0.8}px`, "border-radius": `${toggleHeight * 0.8}px`})
   }
 
