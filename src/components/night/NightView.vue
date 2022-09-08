@@ -2,15 +2,15 @@
   <div class="night-template">
     <div class="night-intro section">
       <div class="neumorphism">
-        <!-- <h-neu-button type="default">
+        <h-neu-button type="circle" width="100">
           <span slot="buttonText"></span>
         </h-neu-button>
       </div>
       <div class="toggle">
         <h-neu-toggle width="100">
-        </h-neu-toggle> -->
+        </h-neu-toggle>
         <div class="musicplayer-front">
-          <MusicPlayerFront/>
+          <!-- <MusicPlayerNowPlaying/> -->
         </div>
       </div>
       <div class="space-position">
@@ -25,7 +25,7 @@
 
 <script setup>
 import {HNeuButton, HNeuToggle} from "@/components/night/components/neuButtons"
-import MusicPlayerFront from "@/components/night/components/MusicPlayerFront.vue"
+import MusicPlayerNowPlaying from "@/components/night/components/MusicPlayerNowPlaying.vue"
 import SolarSystem from "@/components/night/components/SolarSystem.vue"
 
 customElements.define('h-neu-button', HNeuButton)

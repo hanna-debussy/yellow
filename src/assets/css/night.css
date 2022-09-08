@@ -12,10 +12,10 @@
 }
 
 .night-intro .neumorphism {
-  width: 1000px;
-  height: 100vh;
+  width: 400px;
+  height: 20vh;
   position: absolute;
-  top: 0;
+  top: 100px;
   left: 100px;
 }
 

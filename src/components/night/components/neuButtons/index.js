@@ -44,19 +44,60 @@ class HNeuButton extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ["buttonText", "type"]
+    return ["buttonText", "type", "width"]
   }
 
   attributeChangedCallback(attr, oldValue, newValue) {
+    const buttonWidth = this.getAttribute("width")
+    const buttonDefaultHeight = buttonWidth * 0.4
+    const buttonDefaultBorderRadius = buttonWidth * 0.15
+    const buttonCircleInner = buttonWidth * 0.4
+    const buttonCircleInnerPosition = buttonWidth * 0.3
+
     if (this.getAttribute("type") == "default") {
-      this.shadowRoot.querySelector(".neu-btn").style.borderRadius = "20px"
-      this.shadowRoot.querySelector(".neu-btn-shadow").style.borderRadius = "20px"
+      this.shadowRoot.querySelector(".neu-btn").style.width = `${buttonWidth}px`
+      this.shadowRoot.querySelector(".neu-btn").style.height = `${buttonDefaultHeight}px`
+      this.shadowRoot.querySelector(".neu-btn-shadow").style.width = `${buttonWidth}px`
+      this.shadowRoot.querySelector(".neu-btn-shadow").style.height = `${buttonDefaultHeight}px`
+      this.shadowRoot.querySelector(".neu-btn-inner").style.width = `${buttonWidth}px`
+      this.shadowRoot.querySelector(".neu-btn-inner").style.height = `${buttonDefaultHeight}px`
+      this.shadowRoot.querySelector(".neu-btn-inner-shadow").style.width = `${buttonWidth}px`
+      this.shadowRoot.querySelector(".neu-btn-inner-shadow").style.height = `${buttonDefaultHeight}px`
+
+      this.shadowRoot.querySelector(".neu-btn").style.borderRadius = `${buttonDefaultBorderRadius}px`
+      this.shadowRoot.querySelector(".neu-btn-shadow").style.borderRadius = `${buttonDefaultBorderRadius}px`
     } else if (this.getAttribute("type") == "round") {
+      this.shadowRoot.querySelector(".neu-btn").style.width = `${buttonWidth}px`
+      this.shadowRoot.querySelector(".neu-btn").style.height = `${buttonWidth}px`
+      this.shadowRoot.querySelector(".neu-btn-shadow").style.width = `${buttonWidth}px`
+      this.shadowRoot.querySelector(".neu-btn-shadow").style.height = `${buttonWidth}px`
+      this.shadowRoot.querySelector(".neu-btn-inner").style.width = `${buttonWidth}px`
+      this.shadowRoot.querySelector(".neu-btn-inner").style.height = `${buttonWidth}px`
+      this.shadowRoot.querySelector(".neu-btn-inner-shadow").style.width = `${buttonWidth}px`
+      this.shadowRoot.querySelector(".neu-btn-inner-shadow").style.height = `${buttonWidth}px`
       this.shadowRoot.querySelector(".neu-btn").style.borderRadius = "100%"
       this.shadowRoot.querySelector(".neu-btn-shadow").style.borderRadius = "100%"
     } 
     
     if (this.getAttribute("type") == "circle") {
+      this.shadowRoot.querySelector(".neu-btn").style.width = `${buttonWidth}px`
+      this.shadowRoot.querySelector(".neu-btn").style.height = `${buttonWidth}px`
+      this.shadowRoot.querySelector(".neu-btn-shadow").style.width = `${buttonWidth}px`
+      this.shadowRoot.querySelector(".neu-btn-shadow").style.height = `${buttonWidth}px`
+      this.shadowRoot.querySelector(".neu-btn-inner").style.width = `${buttonWidth}px`
+      this.shadowRoot.querySelector(".neu-btn-inner").style.height = `${buttonWidth}px`
+      this.shadowRoot.querySelector(".neu-btn-inner-shadow").style.width = `${buttonWidth}px`
+      this.shadowRoot.querySelector(".neu-btn-inner-shadow").style.height = `${buttonWidth}px`
+      this.shadowRoot.querySelector(".inner-circle").style.width = `${buttonCircleInner}px`
+      this.shadowRoot.querySelector(".inner-circle").style.height = `${buttonCircleInner}px`
+      this.shadowRoot.querySelector(".inner-circle-shadow").style.width = `${buttonCircleInner}px`
+      this.shadowRoot.querySelector(".inner-circle-shadow").style.height = `${buttonCircleInner}px`
+
+      this.shadowRoot.querySelector(".inner-circle").style.top = `${buttonCircleInnerPosition}px`
+      this.shadowRoot.querySelector(".inner-circle").style.left = `${buttonCircleInnerPosition}px`
+      this.shadowRoot.querySelector(".inner-circle-shadow").style.top = `${buttonCircleInnerPosition}px`
+      this.shadowRoot.querySelector(".inner-circle-shadow").style.left = `${buttonCircleInnerPosition}px`
+
       this.shadowRoot.querySelector(".neu-btn").style.borderRadius = "100%"
       this.shadowRoot.querySelector(".neu-btn-shadow").style.borderRadius = "100%"
       this.shadowRoot.querySelector(".neu-btn-inner").style.visibility = "visible"
