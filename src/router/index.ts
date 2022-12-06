@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import DayAndNight from "@/components/intro/DayAndNight.vue"
+import MainTemplate from "@/components/common/MainTemplate.vue"
 
 import DayView from "@/components/day/DayView.vue"
 import NightView from "@/components/night/NightView.vue"
@@ -9,9 +10,9 @@ const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
-      name: "Introduction",
+      name: "home",
       path: "/",
-      component: DayAndNight,
+      component: MainTemplate,
     },
     {
       name: "DayView",
