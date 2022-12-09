@@ -12,6 +12,8 @@ import { RouterView } from 'vue-router';
 @import "assets/css/skills.scss";
 @import "assets/css/projects.scss";
 
+@import "assets/css/meeplo.scss";
+
 /* @import "assets/css/bootstrap-grid.css"; */
 @import "assets/css/introduction.css";
 @import "assets/css/day.css";

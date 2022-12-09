@@ -75,10 +75,25 @@
         </div>
       </div>
     </div>
+
+    <teleport to='body'>
+      <div class="project-modal">
+        <div class="box-shadow"></div>
+        <div class="main-box">
+          <!-- contents -->
+          <MeeploView v-if="openModal" />
+        </div>
+      </div>
+
+    </teleport>
   </div>
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
+import MeeploView from './projects/MeeploView.vue';
+
+const openModal = ref(true)
 </script>
 
 <style>
