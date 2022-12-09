@@ -1,19 +1,19 @@
 <template>
   <div class="yellow-bg">
-    <div class="main-container">
+    <div class="main-container" ref="main">
       <div class="menu-container">
         <div class="main-menu">
           <div class="name">
             프론트엔드 엔지니어 <span class="name-bold">장한나</span>
           </div>
           <div class="menus">
-            <div class="menu-content">
+            <div class="menu-content" @click="linkTo('Home')">
               Home
             </div>
-            <div class="menu-content">
+            <div class="menu-content" @click="linkTo('Profile')">
               Profile
             </div>
-            <div class="menu-content">
+            <div class="menu-content" @click="linkTo('Skills')">
               Skills
             </div>
             <div class="menu-content">
@@ -29,7 +29,7 @@
       </div>
 
       <!-- container -->
-      <div class="section">
+      <div class="section" ref="section">
         <div class="home container">
           <div class="introduction">
             <div class="intro-slogan">
@@ -61,12 +61,51 @@
             </div>
           </div>
         </div>
+        <div class="profile container">
+          <ProfileView />
+        </div>
+        <div class="skills container">
+          <SkillsView />
+        </div>
+        <div class="projects container">
+          <ProjectsView />
+        </div>
       </div>
     </div>
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
+import { ref } from 'vue';
+import ProfileView from '../portfolio/ProfileView.vue';
+import SkillsView from '../portfolio/SkillsView.vue';
+import ProjectsView from '../portfolio/ProjectsView.vue';
+
+
+const viewHeight = window.innerHeight
+const section = ref<HTMLElement>()
+const main = ref<HTMLElement>()
+
+const linkTo = (target: string) => {
+  switch (target) {
+    case "Home":
+      main.value?.scrollTo(0, 0)
+      break
+    case "Profile":
+      main.value?.scrollTo(0, viewHeight - 100)
+      break
+    case "Skills":
+      main.value?.scrollTo(0, viewHeight * 2 - 100)
+      break
+    case "Projects":
+      main.value?.scrollTo(0, 0)
+      break
+    case "Playground":
+      main.value?.scrollTo(0, 0)
+      break
+  }
+}
+
 </script>
 
 <style>

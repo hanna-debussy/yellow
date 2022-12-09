@@ -11,6 +11,8 @@
   "dependencies": {
     "axios": "^0.27.2",
     "lodash": "^4.17.21",
+    "node-sass": "^8.0.0",
+    "sass": "^1.56.1",
     "vue": "^3.2.37",
     "vue-router": "^4.1.6",
     "vuex": "^4.0.2"

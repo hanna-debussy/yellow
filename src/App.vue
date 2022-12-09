@@ -6,10 +6,13 @@
 import { RouterView } from 'vue-router';
 </script>
 
-<style>
-@import "assets/css/common.css";
+<style lang="scss">
+@import "assets/css/common.scss";
+@import "assets/css/profile.scss";
+@import "assets/css/skills.scss";
+@import "assets/css/projects.scss";
 
-@import "assets/css/bootstrap-grid.css";
+/* @import "assets/css/bootstrap-grid.css"; */
 @import "assets/css/introduction.css";
 @import "assets/css/day.css";
 @import "assets/css/night.css";

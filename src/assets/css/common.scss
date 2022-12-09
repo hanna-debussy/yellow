@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: #000;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.yellow-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #FFCA0F;
+  overflow: hidden;
+}
+
+.main-container {
+  margin: 50px;
+  width: calc(100vw - 90px);
+  height: calc(100vh - 100px);
+  background-color: #fff;
+  overflow-y: auto;
+  overflow-x: hidden;
+  
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+
+
+.menu-container {
+  position: fixed;
+  top: 100px;
+  left: 100px;
+  border: 1px solid #000;
+  background-color: #fff;
+  z-index: 1000;
+
+  .main-menu {
+    width: calc(100vw - 200px);
+    height: 40px;
+    display: flex;
+    line-height: 40px;
+    
+    .name {
+      padding-left: 20px;
+      width: 40%;
+      text-align: left;
+      font-size: 1.1rem;
+      
+      .name-bold {
+        font-weight: 800;
+      }
+    }
+    
+    .menus {
+      width: 60%;
+      display: flex;
+      font-weight: 800;
+      
+      .menu-content {
+        width: 20%;
+        border-left: 1px solid #000;
+      }
+    }
+    
+  }
+  
+  .menu-shadow {
+    width: 100%;
+    height: 10px;
+    background-color: #000;
+  }
+}
+
+
+.section {
+  width: calc(100vw - 100px);
+  height: calc(100vh - 250px);
+  
+  .container {
+    margin: 150px 50px 0 50px;
+    width: calc(100vw - 200px);
+    height: calc(100vh - 250px);
+    padding: 0;
+    display: flex;
+  }
+}
+
+
+.home {
+  .introduction {
+    padding: 0 30px;
+    width: 60%;
+    height: calc(100% - 60px);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    
+    .intro-slogan {
+      margin-top: 80px;
+      height: 60px;
+      font-size: 2rem;
+      font-weight: 800;
+    }
+    
+    .intro-name {
+      height: 80px;
+      font-size: 3rem;
+      font-weight: 800;
+    }
+    
+    .intro-portfolio {
+      font-size: 1.9rem;
+      font-weight: 800;
+      color: #aaa;
+    }
+    
+    .intro-content {
+      margin-top: 100px;
+      width: 70%;
+      font-size: 1.2rem;
+      line-height: 28px;
+    }
+  }
+  
+  .profile-image {
+    width: 40%;
+    height: calc(100% - 60px);
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+}
+
+.double-box {
+  margin: 0 auto;
+  width: 70%;
+  height: 80%;
+  position: relative;
+  
+  .box-shadow {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+  }
+  
+  .main-box {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border: 1px solid #000;
+    
+    div {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      img {
+        width: 80%;
+      }
+    }
+  }
+}
+
