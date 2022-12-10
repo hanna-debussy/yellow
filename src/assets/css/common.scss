@@ -32,6 +32,7 @@ a {
   background-color: #fff;
   overflow-y: auto;
   overflow-x: hidden;
+  scrollbar-width: none;
   
   &::-webkit-scrollbar {
     width: 10px;

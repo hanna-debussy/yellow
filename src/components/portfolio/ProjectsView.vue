@@ -84,7 +84,6 @@
           <MeeploView v-if="openModal" />
         </div>
       </div>
-
     </teleport>
   </div>
 </template>
